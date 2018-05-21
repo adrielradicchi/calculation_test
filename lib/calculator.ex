@@ -103,7 +103,58 @@ defmodule Calculator do
   """
 
   def subtract_values(array) do 
-    Enum.reduce(array, fn(x, acc) -> x - acc end) 
+    Enum.reduce(array, fn(x, acc) ->  x - acc end) 
   end
 
+  @doc """
+    Multiplecate multiple values
+    ### Examples 
+
+      iex> Calculator.multiplecate_values([1,2,3,4,5])
+      120
+
+  """
+
+  def multiplecate_values(array) do 
+    Enum.reduce(array, fn(x, acc) ->  x * acc end) 
+  end
+
+  @doc """
+    Divide multiple values
+    ### Examples 
+
+      iex> Calculator.divide_values([1,2,3,4,5])
+      1.875
+
+  """
+
+  def divide_values(array) do 
+    Enum.reduce(array, fn(x, acc) ->  x / acc end) 
+  end
+
+  @doc """
+    Division multiple values
+    ### Examples 
+
+      iex> Calculator.division_values([1,2,3,4,5])
+      1
+
+  """
+
+  def division_values(array) do 
+    Enum.reduce(array, fn(x, acc) ->  div(x,acc) end) 
+  end
+
+  @doc """
+    Mod division multiple values
+    ### Examples 
+
+      iex> Calculator.mod_values([5,4,3,2,1])
+      1
+
+  """
+
+  def mod_values(array) do 
+    Enum.reduce(array, fn(x, acc) -> rem(x, acc) end) 
+  end
 end

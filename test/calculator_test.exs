@@ -71,4 +71,35 @@ defmodule CalculatorTest do
   	refute Calculator.subtract_values([1,2,3,4,5]) == 16
   end
 
+  test "multiplicate values numbers" do
+  	assert Calculator.multiplecate_values([1,2,3,4,5]) == 120
+  end
+
+  test "multiplicate values numbers error" do
+  	refute Calculator.multiplecate_values([1,2,3,4,5]) == 16
+  end
+
+  test "divide values numbers" do
+  	assert Calculator.divide_values([1,2,3,4,5]) == 1.875
+  end
+
+  test "divide values numbers error" do
+  	refute Calculator.divide_values([1,2,3,4,5]) == 16
+  end
+
+  test "division values numbers" do
+  	assert Calculator.division_values([1,2,3,4,5]) == 1
+  end
+
+  test "division values numbers error" do
+  	refute Calculator.division_values([1,2,3,4,5]) == 16
+  end
+
+  test "mod values numbers" do
+  	assert Calculator.mod_values([5,4,3,2,1]) == 1
+  end
+
+  test "mod values numbers error" do
+  	refute Calculator.mod_values([5,4,3,2,1]) == 16
+  end
 end
